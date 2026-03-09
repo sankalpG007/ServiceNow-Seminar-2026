@@ -148,4 +148,113 @@
     .testimonial-card {
         width: 280px;
     }
+}/* Registration Zone Enhancements */
+.enrollment-zone {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
 }
+
+.registration-master-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 1000px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 768px) {
+    .registration-master-card { flex-direction: row; }
+}
+
+/* Left Sidebar Info */
+.registration-info {
+    flex: 1;
+    background-color: var(--sn-dark);
+    padding: 60px 40px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.badge-new {
+    background: var(--sn-green);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 900;
+    width: max-content;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-title-main { font-size: 3rem; font-weight: 900; line-height: 1.1; margin-bottom: 20px; }
+.form-description { font-size: 1.1rem; color: #94a3b8; line-height: 1.6; }
+.highlight-text { color: var(--sn-green); font-weight: bold; }
+
+.trust-icons { margin-top: 30px; space-y: 10px; }
+.trust-icons p { display: flex; align-items: center; gap: 10px; font-size: 0.9rem; color: #cbd5e1; }
+.trust-icons i { color: var(--sn-green); }
+
+/* Right Sidebar Form */
+.registration-form-container { flex: 1.2; padding: 60px 40px; }
+
+.input-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+.input-wrapper { margin-bottom: 25px; }
+.input-wrapper label { display: block; font-weight: 700; font-size: 0.85rem; margin-bottom: 8px; color: var(--sn-dark); }
+
+.input-icon-group { position: relative; }
+.input-icon-group i { 
+    position: absolute; left: 15px; top: 50%; transform: translateY(-50%); 
+    color: #94a3b8; font-size: 1rem; 
+}
+
+.input-icon-group input {
+    width: 100%;
+    padding: 14px 14px 14px 45px;
+    border: 2px solid #e2e8f0;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    background: #f8fafc;
+}
+
+.input-icon-group input:focus {
+    border-color: var(--sn-green);
+    background: white;
+    box-shadow: 0 0 0 4px rgba(129, 181, 50, 0.1);
+    outline: none;
+}
+
+/* Glow Button */
+.glow-submit-btn {
+    width: 100%;
+    background: var(--sn-dark);
+    color: white;
+    padding: 18px;
+    border-radius: 15px;
+    font-weight: 900;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 10px 20px -5px rgba(41, 62, 64, 0.4);
+}
+
+.glow-submit-btn:hover {
+    background: black;
+    transform: scale(1.02);
+    box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.3);
+}
+
+.glow-submit-btn i { font-size: 1.2rem; transition: transform 0.3s; }
+.glow-submit-btn:hover i { transform: translateX(5px) rotate(-10deg); }

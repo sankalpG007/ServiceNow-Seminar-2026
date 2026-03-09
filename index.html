@@ -215,52 +215,86 @@
     </div>
 </section>
 
-        <section id="enroll" class="registration-form">
-    <div class="glass-form-card">
-        <h2 class="form-title">Ready to Enroll?</h2>
-        <p class="form-subtitle">Secure your seat! Fill out the form and get your <br><strong>Entry Ticket instantly!</strong></p>
-        
-        <form id="enrollment-form">
-            <input type="hidden" id="ticket_id" name="ticket_id">
-
-            <div class="form-row">
-                <label>Full Name *</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-
-            <div class="form-row">
-                <label>Email Address *</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-
-            <div class="form-grid">
-                <div class="form-row">
-                    <label>Phone Number *</label>
-                    <input type="tel" id="phone" name="phone" required>
-                </div>
-                <div class="form-row">
-                    <label>WhatsApp Number *</label>
-                    <input type="tel" id="whatsapp" name="whatsapp" required>
+<section id="enroll" class="enrollment-zone">
+    <div class="container mx-auto px-4">
+        <div class="registration-master-card">
+            <div class="registration-info">
+                <div class="badge-new">Limited Seats Available</div>
+                <h2 class="form-title-main">Ready to <span class="text-sn-green">Enroll?</span></h2>
+                <p class="form-description">
+                    Join the league of 2026 ServiceNow Professionals. Fill out the form below to receive your 
+                    <span class="highlight-text">Unique Entry Pass</span> via email instantly.
+                </p>
+                <div class="trust-icons">
+                    <p><i class="fas fa-check-circle"></i> Instant Ticket Generation</p>
+                    <p><i class="fas fa-check-circle"></i> 2026 CSA Syllabus Coverage</p>
+                    <p><i class="fas fa-check-circle"></i> Live Practical Training</p>
                 </div>
             </div>
 
-            <div class="form-row">
-                <label>College Name *</label>
-                <input type="text" id="college" name="college" required>
-            </div>
+            <div class="registration-form-container">
+                <form id="enrollment-form" class="amazing-form">
+                    <input type="hidden" id="ticket_id" name="ticket_id">
+                    
+                    <div class="input-wrapper full-width">
+                        <label>Full Name *</label>
+                        <div class="input-icon-group">
+                            <i class="fas fa-user"></i>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                        </div>
+                    </div>
 
-            <div class="form-row">
-                <label>Qualification & Passing Year *</label>
-                <input type="text" id="qualification" name="qualification" required>
-            </div>
+                    <div class="input-wrapper full-width">
+                        <label>Email Address *</label>
+                        <div class="input-icon-group">
+                            <i class="fas fa-envelope"></i>
+                            <input type="email" id="email" name="email" placeholder="example@company.com" required>
+                        </div>
+                    </div>
 
-            <button type="submit" id="submit-btn" class="submit-btn">
-                Generate My Entry Ticket 🎟️
-            </button>
-        </form>
-        <div id="status-message"></div>
+                    <div class="input-grid">
+                        <div class="input-wrapper">
+                            <label>Phone Number *</label>
+                            <div class="input-icon-group">
+                                <i class="fas fa-phone"></i>
+                                <input type="tel" id="phone" name="phone" placeholder="Mobile" required>
+                            </div>
+                        </div>
+                        <div class="input-wrapper">
+                            <label>WhatsApp Number *</label>
+                            <div class="input-icon-group">
+                                <i class="fab fa-whatsapp"></i>
+                                <input type="tel" id="whatsapp" name="whatsapp" placeholder="WhatsApp" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="input-wrapper full-width">
+                        <label>College Name *</label>
+                        <div class="input-icon-group">
+                            <i class="fas fa-university"></i>
+                            <input type="text" id="college" name="college" placeholder="Enter your college/org name" required>
+                        </div>
+                    </div>
+
+                    <div class="input-wrapper full-width">
+                        <label>Qualification & Passing Year *</label>
+                        <div class="input-icon-group">
+                            <i class="fas fa-graduation-cap"></i>
+                            <input type="text" id="qualification" name="qualification" placeholder="e.g. B.E - 2025" required>
+                        </div>
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="glow-submit-btn">
+                        <span>Generate My Entry Ticket</span>
+                        <i class="fas fa-ticket-alt"></i>
+                    </button>
+                </form>
+                <div id="status-message"></div>
+            </div>
+        </div>
     </div>
-</section>
+</section>   
 
         <div id="ticket-wrapper" class="hidden">
             <div id="ticket" class="pass-container">
