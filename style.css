@@ -1,0 +1,132 @@
+:root {
+    --sn-green: #81b532;
+    --sn-dark: #293e40;
+    --sn-slate: #f1f5f9;
+}
+
+/* Header Styling */
+.blur-header {
+    position: fixed; top: 0; width: 100%; z-index: 100;
+    backdrop-filter: blur(12px); background: rgba(255,255,255,0.85);
+    padding: 1rem 1.5rem; border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.header-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
+.logo-group { display: flex; align-items: center; gap: 12px; }
+.logo-group h1 { font-weight: 900; font-size: 1.25rem; line-height: 1; }
+.logo-group p { font-size: 0.7rem; color: #64748b; text-transform: uppercase; }
+.nav-btn { background: var(--sn-dark); color: white; padding: 0.6rem 1.5rem; border-radius: 50px; font-weight: 700; font-size: 0.85rem; }
+
+/* Hero Styling */
+.hero-section { position: relative; height: 80vh; overflow: hidden; display: flex; align-items: center; justify-content: center; text-align: center; color: white; }
+.hero-video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; }
+.hero-overlay { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(41, 62, 64, 0.85); }
+.hero-container { position: relative; z-index: 5; max-width: 900px; padding: 0 20px; }
+.exam-badge { background: var(--sn-green); padding: 6px 16px; border-radius: 50px; font-weight: 800; font-size: 0.75rem; text-transform: uppercase; }
+.hero-container h2 { font-size: clamp(2.5rem, 6vw, 4.5rem); font-weight: 900; line-height: 1.1; margin: 20px 0; }
+.hero-container h2 span { color: var(--sn-green); }
+.exam-metrics { display: flex; gap: 20px; justify-content: center; margin-top: 30px; }
+.metric { background: rgba(255,255,255,0.1); padding: 15px 30px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.2); }
+.metric h4 { color: var(--sn-green); font-size: 1.5rem; font-weight: 900; }
+
+/* Accordion Styling */
+.syllabus-area { padding: 100px 0; }
+.acc-item { background: white; margin-bottom: 12px; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.02); }
+.acc-trigger { padding: 20px 25px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 700; color: var(--sn-dark); transition: 0.3s; }
+.acc-trigger:hover { background: #fafafa; }
+.acc-panel { max-height: 0; overflow: hidden; transition: 0.4s ease-out; background: #fff; padding: 0 25px; border-top: 0px solid transparent; }
+.acc-panel.open { max-height: 500px; padding-bottom: 25px; border-top: 1px solid #f1f5f9; }
+.acc-panel ul { list-style: disc; padding-left: 20px; color: #475569; margin-top: 15px; }
+
+/* Registration Form */
+.registration-form { padding: 100px 0; display: flex; justify-content: center; }
+.glass-form-card { background: white; padding: 50px; border-radius: 30px; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1); width: 100%; max-width: 550px; }
+.form-row { margin-bottom: 20px; }
+.form-row label { display: block; font-weight: 700; margin-bottom: 8px; color: var(--sn-dark); }
+.form-row input { width: 100%; padding: 12px 16px; border: 1px solid #e2e8f0; border-radius: 12px; transition: 0.3s; }
+.form-row input:focus { border-color: var(--sn-green); outline: none; box-shadow: 0 0 0 3px rgba(129, 181, 50, 0.2); }
+.submit-btn { width: 100%; background: var(--sn-dark); color: white; padding: 16px; border-radius: 12px; font-weight: 800; font-size: 1.1rem; }
+
+/* Pass/Ticket Result */
+.hidden { display: none; }
+.pass-container { max-width: 650px; margin: 0 auto; background: var(--sn-dark); border-radius: 40px; padding: 45px; color: white; position: relative; }
+.pass-header { border-bottom: 2px dashed rgba(255,255,255,0.15); padding-bottom: 25px; display: flex; justify-content: space-between; }
+.pass-header h2 { font-weight: 900; color: var(--sn-green); letter-spacing: -1px; }
+.pass-body { padding: 35px 0; display: flex; justify-content: space-between; align-items: center; }
+.pass-label { text-transform: uppercase; color: var(--sn-green); font-size: 0.7rem; font-weight: 800; display: block; margin-bottom: 5px; }
+
+/* Testimonials Styling */
+.testimonials-area {
+    padding: 80px 0;
+    background-color: var(--sn-dark);
+}
+
+.testimonial-card {
+    width: 320px;
+    margin: 0 1rem;
+    flex-shrink: 0;
+}
+
+.card-inner {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.card-inner:hover {
+    transform: translateY(-10px);
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--sn-green);
+}
+
+.student-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--sn-green);
+    margin-bottom: 1.5rem;
+}
+
+.quote {
+    font-style: italic;
+    font-size: 0.95rem;
+    color: #cbd5e1;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.student-name {
+    font-weight: 800;
+    color: var(--sn-green);
+    font-size: 1rem;
+}
+
+/* Scroll Animation */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+    display: flex;
+    width: max-content;
+    animation: scroll 30s linear infinite;
+}
+
+.animate-scroll:hover {
+    animation-play-state: paused;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .testimonial-card {
+        width: 280px;
+    }
+}

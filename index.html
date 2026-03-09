@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S2S - ServiceNow CSA Seminar 2026</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-slate-50">
+
+    <header class="blur-header">
+        <div class="header-inner">
+            <div class="logo-group">
+                <img src="S2S.png" alt="S2S Logo" class="h-10">
+                <div>
+                    <h1>Skill 2 Success</h1>
+                    <p>Corporate Training 2026</p>
+                </div>
+            </div>
+            <a href="#enroll"><button class="nav-btn">Register for Seminar</button></a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <video autoplay muted loop class="hero-video">
+                <source src="SN_HERO.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+            <div class="hero-container">
+                <span class="exam-badge">Official CSA 2026 Roadmap</span>
+                <h2>ServiceNow CSA <br><span>Certification Seminar</span></h2>
+                <p>Master the platform configuration, security, and automation techniques required for the 2026 Certification.</p>
+                
+                <div class="exam-metrics">
+                    <div class="metric"><h4>60</h4><p>Questions</p></div>
+                    <div class="metric"><h4>90m</h4><p>Duration</p></div>
+                    <div class="metric"><h4>70%</h4><p>Pass Score</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="syllabus-area">
+            <div class="max-w-4xl mx-auto px-4">
+                <h2 class="section-heading text-center">Certification Syllabus 2026</h2>
+                <div class="accordion-wrapper">
+                    
+                    <div class="acc-item">
+                        <div class="acc-trigger" onclick="handleAccordion('mod1')">
+                            <span>1. Platform Overview & Navigation</span>
+                            <i class="fas fa-chevron-down" id="icon-mod1"></i>
+                        </div>
+                        <div id="mod1" class="acc-panel">
+                            <ul>
+                                <li>ServiceNow Platform Overview & Architecture</li>
+                                <li>Platform Capabilities and Services</li>
+                                <li>Unified Navigation and User Experience</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="acc-item">
+                        <div class="acc-trigger" onclick="handleAccordion('mod2')">
+                            <span>2. Instance Configuration</span>
+                            <i class="fas fa-chevron-down" id="icon-mod2"></i>
+                        </div>
+                        <div id="mod2" class="acc-panel">
+                            <ul>
+                                <li>Installing Applications and Plugins</li>
+                                <li>Personalization and Branding customization</li>
+                                <li>User Interface Configuration & Layouts</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="acc-item">
+                        <div class="acc-trigger" onclick="handleAccordion('mod3')">
+                            <span>3. Collaboration & Analytics</span>
+                            <i class="fas fa-chevron-down" id="icon-mod3"></i>
+                        </div>
+                        <div id="mod3" class="acc-panel">
+                            <ul>
+                                <li>Lists, Filters, and Task Management</li>
+                                <li>Visual Task Boards & Form Anatomy</li>
+                                <li>Dashboards, Analytics, and Notifications</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="acc-item">
+                        <div class="acc-trigger" onclick="handleAccordion('mod4')">
+                            <span>4. Self Service & Automation</span>
+                            <i class="fas fa-chevron-down" id="icon-mod4"></i>
+                        </div>
+                        <div id="mod4" class="acc-panel">
+                            <ul>
+                                <li>Knowledge Management & Service Catalog</li>
+                                <li><strong>Workflow Studio (2026 Update)</strong></li>
+                                <li>Virtual Agent & Automation Implementation</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="acc-item">
+                        <div class="acc-trigger" onclick="handleAccordion('mod5')">
+                            <span>5. Database & Security</span>
+                            <i class="fas fa-chevron-down" id="icon-mod5"></i>
+                        </div>
+                        <div id="mod5" class="acc-panel">
+                            <ul>
+                                <li>Data Schema & Access Control (ACL)</li>
+                                <li>CMDB and CSDM Framework</li>
+                                <li>Shared Responsibility Model & Security Center</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="acc-item">
+                        <div class="acc-trigger" onclick="handleAccordion('mod6')">
+                            <span>6. Migration & Integration</span>
+                            <i class="fas fa-chevron-down" id="icon-mod6"></i>
+                        </div>
+                        <div id="mod6" class="acc-panel">
+                            <ul>
+                                <li>UI Policies & Business Rules</li>
+                                <li>System Update Sets & Data Migration</li>
+                                <li>Scripting in ServiceNow (JavaScript Basics)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials-area">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="section-heading text-white">Review of Previous Sessions</h2>
+        <p class="text-sn-green font-bold mb-10 uppercase tracking-widest text-sm">Real stories from our ServiceNow community</p>
+
+        <div class="overflow-hidden relative">
+            <div class="flex animate-scroll">
+                
+                <div class="flex">
+                    <div class="testimonial-card">
+                        <div class="card-inner">
+                            <img src="niharika.jpg" alt="Niharika" class="student-img">
+                            <p class="quote">"The CSA 2026 roadmap was eye-opening. Mastering Workflow Studio and CSDM during the seminar gave me the edge I needed for my certification."</p>
+                            <p class="student-name">- Niharika</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="card-inner">
+                            <img src="pratik.jpg" alt="Prateek" class="student-img">
+                            <p class="quote">"I had no idea how important the Shared Responsibility model was until this session. The instructors make ServiceNow security easy to grasp."</p>
+                            <p class="student-name">- Prateek</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="card-inner">
+                            <img src="Borkar.jpg" alt="Borkar" class="student-img">
+                            <p class="quote">"The deep dive into ITSM and CMDB was incredible. This seminar is a must for anyone looking to build a career in enterprise automation."</p>
+                            <p class="student-name">- Borkar</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonial-card">
+                        <div class="card-inner">
+                            <img src="girl.jpg" alt="Saloni" class="student-img">
+                            <p class="quote">"Learning about UI Policies vs Business Rules with real-world examples helped me clear my technical interview. Truly practical training."</p>
+                            <p class="student-name">- Saloni</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex">
+                    <div class="testimonial-card">
+                        <div class="card-inner">
+                            <img src="niharika.jpg" alt="Niharika" class="student-img">
+                            <p class="quote">"The CSA 2026 roadmap was eye-opening. Mastering Workflow Studio and CSDM during the seminar gave me the edge I needed."</p>
+                            <p class="student-name">- Niharika</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="card-inner">
+                            <img src="pratik.jpg" alt="Prateek" class="student-img">
+                            <p class="quote">"I had no idea how important the Shared Responsibility model was until this session. Highly recommend!"</p>
+                            <p class="student-name">- Prateek</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="card-inner">
+                            <img src="Borkar.jpg" alt="Borkar" class="student-img">
+                            <p class="quote">"The deep dive into ITSM and CMDB was incredible. This seminar is a must for anyone in automation."</p>
+                            <p class="student-name">- Borkar</p>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="card-inner">
+                            <img src="girl.jpg" alt="Saloni" class="student-img">
+                            <p class="quote">"Learning about UI Policies vs Business Rules with real-world examples helped me clear my technical interview."</p>
+                            <p class="student-name">- Saloni</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section id="enroll" class="registration-form">
+    <div class="glass-form-card">
+        <h2 class="form-title">Ready to Enroll?</h2>
+        <p class="form-subtitle">Secure your seat! Fill out the form and get your <br><strong>Entry Ticket instantly!</strong></p>
+        
+        <form id="enrollment-form">
+            <input type="hidden" id="ticket_id" name="ticket_id">
+
+            <div class="form-row">
+                <label>Full Name *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-row">
+                <label>Email Address *</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-grid">
+                <div class="form-row">
+                    <label>Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                <div class="form-row">
+                    <label>WhatsApp Number *</label>
+                    <input type="tel" id="whatsapp" name="whatsapp" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <label>College Name *</label>
+                <input type="text" id="college" name="college" required>
+            </div>
+
+            <div class="form-row">
+                <label>Qualification & Passing Year *</label>
+                <input type="text" id="qualification" name="qualification" required>
+            </div>
+
+            <button type="submit" id="submit-btn" class="submit-btn">
+                Generate My Entry Ticket 🎟️
+            </button>
+        </form>
+        <div id="status-message"></div>
+    </div>
+</section>
+
+        <div id="ticket-wrapper" class="hidden">
+            <div id="ticket" class="pass-container">
+                <div class="pass-header">
+                    <h2>SEMINAR ENTRY PASS</h2>
+                    <p id="ticket-id-display"></p>
+                </div>
+                <div class="pass-body">
+                    <div class="pass-info">
+                        <span class="pass-label">Attendee</span>
+                        <h4 id="pass-name"></h4>
+                        <p id="pass-college"></p>
+                    </div>
+                    <div class="pass-venue">
+                        <span class="pass-label">Seminar Details</span>
+                        <p><strong>March 28, 2026</strong></p>
+                        <p>Vidarbh Hindi Sahitya Sammelan, Nagpur</p>
+                    </div>
+                </div>
+                <div class="pass-footer">
+                    <button onclick="savePassAsPDF()">Download PDF Pass</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+
+    <footer class="site-footer">
+        <p>&copy; 2026 Skill 2 Success Institute • Empowering ServiceNow Professionals</p>
+    </footer>
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
