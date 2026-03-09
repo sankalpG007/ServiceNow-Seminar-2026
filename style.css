@@ -258,3 +258,106 @@
 
 .glow-submit-btn i { font-size: 1.2rem; transition: transform 0.3s; }
 .glow-submit-btn:hover i { transform: translateX(5px) rotate(-10deg); }
+/* Syllabus High-Impact Design */
+.syllabus-card {
+    position: relative;
+    background: white;
+    padding: 40px 30px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.syllabus-card::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 0;
+    background: var(--sn-dark);
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+.syllabus-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(41, 62, 64, 0.2);
+}
+
+.syllabus-card:hover::before {
+    height: 100%;
+}
+
+.card-icon-box {
+    width: 60px;
+    height: 60px;
+    background: var(--sn-slate);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--sn-green);
+    margin-bottom: 25px;
+    transition: 0.4s;
+}
+
+.syllabus-card:hover .card-icon-box {
+    background: var(--sn-green);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.card-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--sn-dark);
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.syllabus-card:hover .card-title {
+    color: white;
+}
+
+.card-list {
+    list-style: none;
+    padding: 0;
+}
+
+.card-list li {
+    font-size: 0.95rem;
+    color: #64748b;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.card-list li::before {
+    content: "\f058";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color: var(--sn-green);
+    font-size: 0.8rem;
+}
+
+.syllabus-card:hover .card-list li {
+    color: #cbd5e1;
+}
+
+.card-number {
+    position: absolute;
+    right: -10px;
+    bottom: -10px;
+    font-size: 5rem;
+    font-weight: 900;
+    color: rgba(0,0,0,0.03);
+    line-height: 1;
+    transition: 0.3s;
+}
+
+.syllabus-card:hover .card-number {
+    color: rgba(255,255,255,0.05);
+}
