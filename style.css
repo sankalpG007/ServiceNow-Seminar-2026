@@ -361,3 +361,167 @@
 .syllabus-card:hover .card-number {
     color: rgba(255,255,255,0.05);
 }
+
+/* Premium Testimonials CSS */
+.testimonials-area {
+    background: radial-gradient(circle at top left, #2d4547, #1a2627);
+}
+
+.testimonial-ticker {
+    width: 100%;
+    padding: 20px 0;
+    mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+}
+
+.ticker-track {
+    display: flex;
+    gap: 30px;
+    width: max-content;
+    animation: slowScroll 40s linear infinite;
+}
+
+.ticker-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes slowScroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.premium-card {
+    width: 380px;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 35px;
+    border-radius: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.premium-card:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border-color: var(--sn-green);
+    transform: scale(1.02) translateY(-5px);
+}
+
+.highlight-border {
+    border: 1px solid rgba(129, 181, 50, 0.3);
+    box-shadow: 0 0 30px rgba(129, 181, 50, 0.1);
+}
+
+.card-stars {
+    font-size: 0.8rem;
+    color: #f59e0b; /* Amber Stars */
+    margin-bottom: 20px;
+}
+
+.quote-text {
+    font-size: 1.05rem;
+    color: #e2e8f0;
+    line-height: 1.7;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+
+.user-meta {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-avatar {
+    width: 55px;
+    height: 55px;
+    border-radius: 16px;
+    object-fit: cover;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.user-name {
+    font-weight: 800;
+    color: white;
+    font-size: 1rem;
+    margin-bottom: 2px;
+}
+
+.user-desig {
+    font-size: 0.8rem;
+    color: var(--sn-green);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Mobile Tweak */
+@media (max-width: 768px) {
+    .premium-card {
+        width: 300px;
+        padding: 25px;
+    }
+}
+
+/* Testimonials Background Pattern */
+.testimonials-area {
+    position: relative;
+    background-color: var(--sn-dark);
+}
+
+.sn-pattern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(var(--sn-green) 0.5px, transparent 0.5px);
+    background-size: 30px 30px;
+    opacity: 0.05;
+    z-index: 1;
+}
+
+/* Header Typography Fixes */
+.testimonials-area h2 {
+    text-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.testimonials-area .font-black {
+    font-weight: 900;
+}
+
+/* Ensure the scroll feels high-end */
+.animate-scroll {
+    display: flex;
+    width: max-content;
+    animation: scroll 40s linear infinite; /* Slowed down slightly for readability */
+    padding: 20px 0;
+}
+
+/* Gradient Fade for Scrolling Effect */
+.overflow-hidden.relative::before,
+.overflow-hidden.relative::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 150px;
+    height: 100%;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.overflow-hidden.relative::before {
+    left: 0;
+    background: linear-gradient(to right, var(--sn-dark), transparent);
+}
+
+.overflow-hidden.relative::after {
+    right: 0;
+    background: linear-gradient(to left, var(--sn-dark), transparent);
+}
+
+/* Testimonial Card Spacing Adjustment */
+.testimonial-card {
+    margin-right: 40px; /* More breathing room */
+}
