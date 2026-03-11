@@ -6,15 +6,35 @@
 
 /* Header Styling */
 .blur-header {
-    position: fixed; top: 0; width: 100%; z-index: 100;
-    backdrop-filter: blur(12px); background: rgba(255,255,255,0.85);
-    padding: 1rem 1.5rem; border-bottom: 1px solid rgba(0,0,0,0.05);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.95);
+    height: 100px; /* Increased height for bigger logo space */
+    border-bottom: 2px solid rgba(129, 181, 50, 0.2); /* Subtle ServiceNow Green border */
+    display: flex;
+    align-items: center;
 }
-.header-inner { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
-.logo-group { display: flex; align-items: center; gap: 12px; }
+.header-inner { display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 1rem}
+.logo-group { display: flex; align-items: left; gap: 12px; }
 .logo-group h1 { font-weight: 900; font-size: 1.25rem; line-height: 1; }
 .logo-group p { font-size: 0.7rem; color: #64748b; text-transform: uppercase; }
-.nav-btn { background: var(--sn-dark); color: white; padding: 0.6rem 1.5rem; border-radius: 50px; font-weight: 700; font-size: 0.85rem; }
+.nav-btn { background: var(--sn-dark);
+    color: white;
+    padding: 14px 30px;
+    border-radius: 50px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    box-shadow: 0 4px 15px rgba(41, 62, 64, 0.3); }
 
 /* Hero Styling */
 .hero-section { position: relative; height: 80vh;width: 100%; overflow: hidden; display: flex; align-items: center; justify-content: center; text-align: center; color: white; }
@@ -524,4 +544,519 @@
 /* Testimonial Card Spacing Adjustment */
 .testimonial-card {
     margin-right: 40px; /* More breathing room */
+}
+
+.branding-center {
+    flex: 2 1 0px; /* Gives more room to the text */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.branding-center h1 {
+    font-weight: 900;
+    font-size: 2rem; /* Larger font for center focus */
+    line-height: 1;
+    color: var(--sn-dark);
+    margin: 0;
+}
+
+.branding-center p {
+    font-size: 0.75rem;
+    color: var(--sn-green); /* Using ServiceNow Green for the subtext */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-top: 4px;
+}
+
+/* Hide text on mobile to avoid crowding */
+@media (max-width: 768px) {
+    .branding-center h1 {
+        font-size: 1.1rem;
+    }
+    .branding-center p {
+        display: none;
+    }
+}
+
+.logo-container {
+    flex: 0.3;
+}
+
+@media (max-width: 768px) {
+    .blur-header { height: 80px; }
+    .main-logo-v2 { height: 65px;
+    width: auto;
+    flex-shrink: 0}
+    .main-logo-v3 { height: 55px;
+    width: auto;
+    flex-shrink: 0; }
+    .brand-title { font-size: 1.3rem; }
+    .brand-sub-premium { font-size: 0.7rem; letter-spacing: 2px; }
+}
+
+.brand-title {
+    font-weight: 900; /* Extra Bold */
+    font-size: 2rem; 
+    color: var(--sn-dark);
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    /* Professional shadow for depth */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.brand-sub-premium {
+    font-size: 0.9rem;
+    color: #1a2e21; /* Darker green/charcoal for better visibility */
+    font-weight: 900; /* Made ultra-bold to match title */
+    letter-spacing: 4px;
+    margin-top: 2px;
+    text-transform: uppercase;
+    /* Subtle shadow to prevent "lightness" on white background */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* 3. Button Container */
+.logo-container,
+.button-container {
+    flex: 1 1 0px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Hero Refinements */
+.awareness-tags {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.tag-gold {
+    background: linear-gradient(90deg, #d4af37, #f1c40f);
+    color: #1a1a1a;
+    padding: 8px 24px;
+    border-radius: 50px;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+}
+
+.tag-green {
+    background: rgba(129, 181, 50, 0.2);
+    border: 1px solid var(--sn-green);
+    color: var(--sn-green);
+    padding: 6px 20px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+.hero-main-title {
+    font-size: clamp(2.8rem, 7vw, 5rem);
+    font-weight: 900;
+    line-height: 1;
+    margin-bottom: 30px;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* USP Row Styles */
+.usp-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px 30px;
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(5px);
+}
+
+.usp-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    font-size: 1rem;
+    color: white;
+}
+
+.usp-item i {
+    color: var(--sn-green);
+}
+
+.usp-separator {
+    width: 1px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Audience Section Styles */
+.attendance-section {
+    padding: 60px 0;
+    background: var(--sn-slate);
+    margin-top: -50px; /* Overlap effect */
+    position: relative;
+    z-index: 10;
+}
+
+.audience-box {
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.audience-title {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--sn-dark);
+    margin-bottom: 30px;
+}
+
+.audience-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.audience-item {
+    background: var(--sn-slate);
+    color: var(--sn-dark);
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.audience-item:hover {
+    background: white;
+    border-color: var(--sn-green);
+    color: var(--sn-green);
+    transform: translateY(-3px);
+}
+
+.standout {
+    background: var(--sn-dark);
+    color: white;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .usp-row { flex-direction: column; border-radius: 20px; gap: 10px; }
+    .usp-separator { display: none; }
+    .hero-main-title { font-size: 2.5rem; }
+}
+
+/* Reasons Section Styling */
+.reasons-section {
+    padding: 100px 0;
+    background: white;
+}
+
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.reason-card {
+    position: relative;
+    padding: 40px;
+    background: var(--sn-slate);
+    border-radius: 30px;
+    border: 1px solid transparent;
+    transition: all 0.4s ease;
+    overflow: hidden;
+}
+
+.reason-card:hover {
+    background: white;
+    border-color: var(--sn-green);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(129, 181, 50, 0.1);
+}
+
+.reason-number {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 3rem;
+    font-weight: 900;
+    color: rgba(0, 0, 0, 0.05);
+    line-height: 1;
+}
+
+.reason-icon {
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    color: var(--sn-green);
+    margin-bottom: 25px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.reason-card:hover .reason-icon {
+    background: var(--sn-green);
+    color: white;
+}
+
+.reason-content h3 {
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: var(--sn-dark);
+    margin-bottom: 12px;
+}
+
+.reason-content p {
+    font-size: 0.95rem;
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* Standout Card - Highlighted by default */
+.standout-card {
+    background: white;
+    border-color: rgba(129, 181, 50, 0.3);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+
+/* Custom Utilities */
+.sn-badge-outline {
+    border: 1px solid var(--sn-green);
+    color: var(--sn-green);
+    padding: 6px 16px;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.sn-text-gradient {
+    background: linear-gradient(to right, var(--sn-green), #5c8d1a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Bento Layout Overhaul */
+.bento-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 320px); /* Taller rows for better spacing */
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bento-card {
+    position: relative;
+    border-radius: 40px; /* Smoother corner radius */
+    padding: 40px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid #f1f5f9;
+}
+
+/* Card Styling Variants */
+.bento-hero { background: var(--sn-dark); color: white; }
+.bento-green { background: var(--sn-green); color: white; border: none; }
+.bento-dark { background: #1a2e21; color: white; }
+.bento-white { background: #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.02); }
+.bento-impact { background: #f8fafc; border: 1px solid #e2e8f0; }
+
+/* Visual Decorations (The "Secret Sauce") */
+.bento-glow {
+    position: absolute;
+    top: -50%; left: -50%; width: 200%; height: 200%;
+    background: radial-gradient(circle, rgba(129, 181, 50, 0.1) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.bento-decoration-circle {
+    position: absolute;
+    top: -20px; right: -20px; width: 150px; height: 150px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+}
+
+/* Hover Interaction */
+.bento-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 40px 80px -20px rgba(0,0,0,0.15);
+    border-color: var(--sn-green);
+}
+
+.bento-icon {
+    font-size: 2.5rem;
+    margin-bottom: auto;
+    transition: 0.4s ease;
+}
+
+.bento-card:hover .bento-icon {
+    transform: scale(1.1) rotate(-8deg);
+    color: var(--sn-green);
+}
+
+.bento-card h3 {
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.bento-card p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    opacity: 0.8;
+}
+
+.sn-green-text { color: var(--sn-green); }
+
+/* Grid logic for desktop vs mobile */
+.col-span-2 { grid-column: span 2; }
+.row-span-2 { grid-row: span 2; }
+
+@media (max-width: 1024px) {
+    .bento-grid { grid-template-columns: repeat(2, 1fr); grid-template-rows: auto; }
+}
+
+@media (max-width: 640px) {
+    .bento-grid { grid-template-columns: 1fr; }
+    .col-span-2, .row-span-2 { grid-column: span 1; grid-row: span 1; }
+    .bento-card { padding: 30px; border-radius: 30px; }
+}
+
+.logo-container-group {
+    flex: 1 1 0px; /* Takes up 1/3 of the space */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Pushes logos to the left */
+    gap: 15px; /* Space between the two logos */
+}
+
+/* Ensure the overall header has a defined height */
+.blur-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 90px; /* Standard professional height */
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 2px solid rgba(129, 181, 50, 0.2);
+    display: flex;
+    align-items: center;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* LEFT: Logos moved to far left */
+.logo-side-container {
+    flex: 1; /* Takes 1/3 space */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Pushes content to the left edge */
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+/* CENTER: Perfectly aligned with Hero */
+.branding-center {
+    flex: 2; /* Takes more space for text */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* RIGHT: Button moved to far right */
+.button-side-container {
+    flex: 1; /* Takes 1/3 space to balance the left */
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Logo Sizing to prevent overflow */
+.nav-logo {
+    object-fit: contain;
+    flex-shrink: 0; /* Prevents logos from being squashed */
+}
+
+.logo-s2s {
+    height: 60px; /* Controlled size to stay within 90px header */
+}
+
+.logo-ss {
+    height: 45px;
+}
+
+/* Typography fix for readability */
+.brand-title {
+    font-weight: 900;
+    font-size: 1.6rem;
+    color: var(--sn-dark);
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.brand-sub-premium {
+    font-size: 0.8rem;
+    color: #1a2e21; /* Darker green for visibility */
+    font-weight: 900;
+    letter-spacing: 3px;
+    margin-top: 2px;
+}
+
+/* Professional Button */
+.nav-btn {
+    background: var(--sn-dark);
+    color: white;
+    padding: 10px 22px;
+    border-radius: 50px;
+    font-weight: 800;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .logo-s2s { height: 40px; }
+    .logo-ss { height: 30px; }
+    .brand-title { font-size: 1rem; }
+    .brand-sub-premium { display: none; }
 }
