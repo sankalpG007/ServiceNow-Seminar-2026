@@ -59,19 +59,42 @@ document.getElementById('enrollment-form').addEventListener('submit', function(e
 
 // PDF Generator Function
 async function savePassAsPDF() {
-    const { jsPDF } = window.jspdf;
     const element = document.getElementById('ticket');
     
-    // Check if libraries are loaded
-    if (!window.html2canvas) {
-        console.error("html2canvas library not found");
-        return;
-    }
-
-    html2canvas(element, { scale: 2 }).then(canvas => {
-        const imgData = canvas.toDataURL('image/png');
-        const pdf = new jsPDF('l', 'mm', 'a4'); // Landscape, mm, A4 size
-        pdf.addImage(imgData, 'PNG', 15, 15, 260, 140);
-        pdf.save('ServiceNow_Seminar_Pass.pdf');
+    // Create the PDF at a fixed A4-friendly scale
+    // This prevents mobile viewports from shrinking the capture
+    const canvas = await html2canvas(element, {
+        scale: 2, // High resolution but mobile-friendly
+        useCORS: true,
+        backgroundColor: "#f1f5f9", // Matches your page background
+        logging: false,
+        // CRITICAL: Force the capture to ignore mobile's tiny screen width
+        width: 850, 
+        onclone: (clonedDoc) => {
+            clonedDoc.getElementById('ticket').style.display = 'flex';
+            clonedDoc.getElementById('ticket').style.width = '850px';
+        }
     });
+
+    const imgData = canvas.toDataURL('image/png');
+    const { jsPDF } = window.jspdf;
+
+    // 'l' for Landscape orientation looks better for ticket shapes
+    const pdf = new jsPDF('l', 'mm', 'a4');
+    
+    const pdfWidth = pdf.internal.pageSize.getWidth();
+    const pdfHeight = pdf.internal.pageSize.getHeight();
+    
+    // Calculate aspect ratio to prevent compression
+    const ratio = canvas.width / canvas.height;
+    const width = pdfWidth - 20; // 10mm margins
+    const height = width / ratio;
+
+    // Center vertically
+    const y = (pdfHeight - height) / 2;
+
+    pdf.addImage(imgData, 'PNG', 10, y, width, height);
+    
+    const name = document.getElementById('pass-name').innerText || 'Attendee';
+    pdf.save(`ServiceNow_Pass_${name.trim()}.pdf`);
 }

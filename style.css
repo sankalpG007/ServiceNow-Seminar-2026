@@ -1766,3 +1766,29 @@
     }
     .degree-card-v3 { padding: 25px 15px; }
 }
+
+@media print {
+    #ticket {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+}
+
+/* Ensure the ticket has a fixed width for the capture script */
+/* Ensure the ticket maintains its shape during capture */
+#ticket {
+    min-width: 850px; /* Forces it to stay wide even on small screens */
+    flex-shrink: 0;
+    transform-origin: top left;
+}
+
+/* Hide the ticket-wrapper normally but keep it available for the script */
+#ticket-wrapper.hidden {
+    display: none;
+}
+
+/* Fix for mobile image compression */
+#ticket img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
