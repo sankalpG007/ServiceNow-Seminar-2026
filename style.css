@@ -1774,7 +1774,6 @@
     }
 }
 
-/* Ensure the ticket has a fixed width for the capture script */
 /* Ensure the ticket maintains its shape during capture */
 #ticket {
     min-width: 850px; /* Forces it to stay wide even on small screens */
